@@ -16,3 +16,5 @@ llm-cli-mixtral:
 
 e01:
 	@cargo run -q --example 01-simple
+e02:
+	@cargo run -q --example 02-context

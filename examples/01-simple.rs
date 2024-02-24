@@ -1,9 +1,8 @@
 use ollama_rs::generation::completion::request::GenerationRequest;
+use ollama_rs::Ollama;
+use xp_ollama::consts::{DEFAULT_SYSTEM_MOCK, MODEL};
 use xp_ollama::gen::gen_stream_print;
 use xp_ollama::Result;
-use xp_ollama::consts::{DEFAULT_SYSTEM_MOCK, MODEL};
-
-use ollama_rs::Ollama;
 
 
 #[tokio::main]
