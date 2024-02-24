@@ -22,6 +22,7 @@ async fn main() -> Result<()> {
         let mut gen_req = GenerationRequest::new(MODEL.to_string(), prompt.to_string());
         
         if let Some(last_ctx) = last_ctx.take() {
+            // if you do not provide context, the model will not know what was your last question
             gen_req = gen_req.context(last_ctx);
         }
 
