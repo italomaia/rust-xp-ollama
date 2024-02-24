@@ -1,0 +1,17 @@
+[package]
+name = "xp-ollama"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lints.rust]
+unsafe_code = "forbid"
+# unused = "allow" # for dev only
+
+[dependencies]
+tokio ={ version = "1", features = ["full"]}
+ollama-rs = { version = "0.1", features = ["stream"]}
+simple-fs = { version = "0.1", features = ["full"]}
+derive_more = { version = "0.99.17", features = ["from"] }
+futures = "0.3.30"
