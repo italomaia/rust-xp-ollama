@@ -56,6 +56,8 @@ pub mod gen {
 
                     if let Some(final_data) = res.final_data {
                         stdout.write_all(b"\n").await?;
+                        stdout.flush().await?;
+
                         return Ok(Some(final_data));
                     }
                 }
@@ -63,6 +65,7 @@ pub mod gen {
         }
     
         stdout.write_all(b"\n").await?;
+        stdout.flush().await?;
     
         Ok(None)
     }

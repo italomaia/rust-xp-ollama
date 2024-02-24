@@ -18,7 +18,7 @@ async fn main() -> Result<()> {
     let mut last_ctx: Option<GenerationContext> = None;
     
     for prompt in prompts {
-        println!("->> ??? {}", prompt);
+        println!("\n->> ??? {}", prompt);
         let mut gen_req = GenerationRequest::new(MODEL.to_string(), prompt.to_string());
         
         if let Some(last_ctx) = last_ctx.take() {
