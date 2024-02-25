@@ -12,7 +12,7 @@ async fn main() -> Result<()> {
     // defaults to localhost:11434
     let ollama = Ollama::default();
     let prompts = &[
-        "Why the sky is read? (be concise)",
+        "Why the sky is red? (be concise)",
         "What was my first question?"
     ];
 
