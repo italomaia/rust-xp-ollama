@@ -1,6 +1,10 @@
 # model is stored under ./ollama; make sure path exists
 llm-up:
-	@podman run -d -v ${HOME}/Ollama:/root/.ollama -p 11434:11434 --name ollama docker.io/ollama/ollama
+	@podman run --rm -d -v ${HOME}/Ollama:/root/.ollama -p 11434:11434 --name ollama docker.io/ollama/ollama
+
+# if the container exists, just start it
+llm-st:
+	@podman start ollama
 
 # -- BEG load llm-models
 
@@ -12,9 +16,13 @@ llm-cli-llama2:
 llm-cli-mixtral:
 	podman exec -it ollama ollama run mixtral
 
-# -- END
+# -- end
 
-e01:
+# -- run examples
+c01:
 	@cargo run -q --example 01-simple
-e02:
+c02:
 	@cargo run -q --example 02-context
+c03:
+	@cargo run -q --example 03-chat
+# -- end
