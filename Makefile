@@ -2,10 +2,6 @@
 llm-up:
 	@podman run --rm -d -v ${HOME}/Ollama:/root/.ollama -p 11434:11434 --name ollama docker.io/ollama/ollama
 
-# if the container exists, just start it
-llm-st:
-	@podman start ollama
-
 # -- BEG load llm-models
 
 # 3.8gb download...
