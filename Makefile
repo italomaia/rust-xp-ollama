@@ -21,4 +21,6 @@ c02:
 	@cargo run -q --example 02-context
 c03:
 	@cargo run -q --example 03-chat
+c04:
+	@cargo run -q --example 04-embeddings
 # -- end
