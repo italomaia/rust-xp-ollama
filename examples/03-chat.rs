@@ -14,7 +14,8 @@ async fn main() -> Result<()> {
     let prompts = &[
         "What is the best language? (be concise)",
         "What is the second best language?",
-        "Did I ask you something about Cobol?"
+        "Did I ask you something about Cobol?",
+        "What is the best programming language between Rust and Cobol?"
     ];
     let system_msg =
         ChatMessage::new(MessageRole::System, DEFAULT_SYSTEM_MOCK.to_string());
